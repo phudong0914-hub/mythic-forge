@@ -39,7 +39,7 @@ The rules combine three layers:
 Requirements: Node.js 20+ and pnpm.
 
 ```bash
-git clone <repo-url> my-project
+git clone https://github.com/phudong0914-hub/mythic-forge.git my-project
 cd my-project
 pnpm install
 pnpm dev
@@ -115,7 +115,7 @@ Bộ luật gồm ba tầng:
 Yêu cầu: Node.js 20+ và pnpm.
 
 ```bash
-git clone <repo-url> my-project
+git clone https://github.com/phudong0914-hub/mythic-forge.git my-project
 cd my-project
 pnpm install
 pnpm dev
