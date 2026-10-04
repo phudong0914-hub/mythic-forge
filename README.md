@@ -46,6 +46,8 @@ pnpm dev
 
 Open <http://localhost:3000>.
 
+> **Note:** clone to a normal local disk. pnpm cannot create its symlinked `node_modules` on Google Drive virtual drives (`EISDIR ... symlink`). See [ADR 0001](docs/adr/0001-deny-unrs-resolver-build-script.md).
+
 ### Using with AI agents
 
 - **Claude Code / Antigravity / Cursor**: just open the folder — the rules load automatically.
@@ -119,6 +121,8 @@ pnpm dev
 ```
 
 Mở <http://localhost:3000>.
+
+> **Lưu ý:** hãy clone vào ổ đĩa thường trên máy. pnpm không tạo được `node_modules` (vốn dùng symlink) trên ổ ảo của Google Drive và sẽ báo lỗi `EISDIR ... symlink`. Xem [ADR 0001](docs/adr/0001-deny-unrs-resolver-build-script.md).
 
 ### Dùng với AI agent
 
