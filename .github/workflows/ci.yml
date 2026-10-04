@@ -1,0 +1,46 @@
+name: CI — Mythic Forge Quality Gate
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Verify Rules, Code & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: ⚡ Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: 🛡️ Check Sacred Laws (Anti-Slop Linter)
+        run: node scripts/check-sacred-laws.mjs
+
+      - name: 🔍 Lint with ESLint
+        run: pnpm lint
+
+      - name: 📜 Validate Taste Profile
+        run: npx taste lint --all
+
+      - name: 🏗️ Next.js Production Build
+        run: pnpm build
