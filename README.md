@@ -9,6 +9,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
 ![pnpm](https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/phudong0914-hub/mythic-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/phudong0914-hub/mythic-forge/actions/workflows/ci.yml)
 
 [English](#english) · [Tiếng Việt](#tiếng-việt)
 
@@ -27,6 +28,8 @@ Mythic Forge is a Next.js App Router starter where every AI coding agent — Cla
 | [`AGENTS.md`](AGENTS.md) | Antigravity, Cursor, Codex, and other `AGENTS.md`-aware agents | **Single source of truth** for all rules |
 | [`CLAUDE.md`](CLAUDE.md) | Claude Code | Imports `AGENTS.md` (`@AGENTS.md`) |
 | [`.commandcode/taste/taste.md`](.commandcode/taste/taste.md) | [Command Code](https://commandcode.ai) | Condensed mirror of the rules as a Taste profile |
+| [`.mcp.json`](.mcp.json) | Claude Code, Cursor, Antigravity | Model Context Protocol config (Filesystem, SQLite, Fetch) |
+| [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | GitHub Actions | Automated CI checking build, lint, taste, and Sacred Laws |
 
 The rules combine three layers:
 
@@ -103,6 +106,8 @@ Mythic Forge là bộ khung Next.js (App Router). Ngay khi bạn mở dự án, 
 | [`AGENTS.md`](AGENTS.md) | Antigravity, Cursor, Codex và các agent hỗ trợ `AGENTS.md` | **Nguồn duy nhất** chứa toàn bộ luật |
 | [`CLAUDE.md`](CLAUDE.md) | Claude Code | Nhập lại `AGENTS.md` (`@AGENTS.md`) |
 | [`.commandcode/taste/taste.md`](.commandcode/taste/taste.md) | [Command Code](https://commandcode.ai) | Bản rút gọn của bộ luật dưới dạng Taste profile |
+| [`.mcp.json`](.mcp.json) | Claude Code, Cursor, Antigravity | Cấu hình MCP chuẩn kết nối SQLite, Filesystem, Fetch |
+| [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | GitHub Actions | Luồng CI tự động kiểm tra build, lint, taste và Sacred Laws |
 
 Bộ luật gồm ba tầng:
 
